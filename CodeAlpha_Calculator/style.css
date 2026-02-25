@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;   /* LEFT SIDE */
+    align-items: center;
+    padding-left: 300px;            /* Space from left */
+
+    background: url("bg.jpg") no-repeat center center/cover;
+}
+
+/* Calculator Card */
+.calculator {
+    background: #9fb064; /* Light grey glass */
+    backdrop-filter: blur(8px);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    width: 330px;
+    border: 1px solid rgba(200, 200, 200, 0.5);
+}
+
+/* Display */
+#display {
+    width: 100%;
+    height: 60px;
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-align: right;
+    padding: 10px;
+    border-radius: 12px;
+    border: none;
+    background: #e4e7eb; /* BG matching shade */
+    color: #2c3e50;
+    box-shadow: inset 2px 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Button Grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+/* All Buttons */
+button {
+    height: 55px;
+    font-size: 18px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s ease;
+    font-weight: 500;
+}
+
+/* Number Buttons */
+button:not(.clear):not(.equal) {
+    background: #dfe3e8;   /* Soft grey */
+    color: #502c2c;
+}
+
+button:not(.clear):not(.equal):hover {
+    background: #cfd6dd;
+}
+
+/* Clear Button */
+.clear {
+    background-color: #ff7675;
+    color: white;
+}
+
+/* Equal Button */
+.equal {
+    background-color: #6c8cff;  /* Soft blue highlight */
+    color: white;
+    grid-row: span 2;
+}
+
+/* Zero Button */
+.zero {
+    grid-column: span 2;
+}
